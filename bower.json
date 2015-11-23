@@ -1,0 +1,24 @@
+{
+  "name": "ng-intro",
+  "homepage": "",
+  "authors": [
+    "Charles GloveHanded Lane"
+  ],
+  "description": "",
+  "main": "",
+  "moduleType": [],
+  "license": "MIT",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "angular-route": "~1.4.8",
+    "angular": "~1.4.8",
+    "underscore": "~1.8.3",
+    "node-sass": "~3.4.2"
+  }
+}
