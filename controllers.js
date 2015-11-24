@@ -8,8 +8,12 @@
         MainService.alertMe();
       };
       $scope.scrabbleMap=function(string){
+        if(string.length>9){
+          alert('too many letters, mainframe crash')
+        }else{
         $scope.answers= MainService.scrabbleMap(string);
         console.log($scope.answers);
+      }
       };
       $scope.definiiton=function(word){
         console.log('ive been clicked');
