@@ -5,11 +5,16 @@
           underscore.factory('_', function() {
               return window._; //Underscore should be loaded on the page
           });
+    var jquery = angular.module('jquery', []);
+                  jquery.factory('$', function() {
+                      return window.$; //Underscore should be loaded on the page
+                  });
 
   angular
     .module('scrabble', [
       'ngRoute',
-      'underscore'
+      'underscore',
+      'jquery'
     ])
     .config(function ($routeProvider) {
       $routeProvider
@@ -22,6 +27,9 @@
         })
         .otherwise({ redirectTo: '/404'})
 
+    })
+    .config(function($httpProvider){
+       delete $httpProvider.defaults.headers.common['X-Requested-With'];
     });
 
 

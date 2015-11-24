@@ -6,6 +6,18 @@
       var url = 'http://tiny-tiny.herokuapp.com/collections/scrabble1';
 
       var page ={
+        dictionary:function(word){
+          console.log("SRE,", word);
+          var dicUrl = 'http://www.dictionaryapi.com/api/v1/references/thesaurus/xml/'+word+'?key=ad64c86b-8c7b-4ef5-859b-0f404c24d0c5';
+          $.ajax({
+           url: 'http://www.dictionaryapi.com/api/v1/references/thesaurus/xml/'+word+'?key=ad64c86b-8c7b-4ef5-859b-0f404c24d0c5',
+           type: 'GET',
+           success: function(res) {
+               return res;
+               console.log(res);
+           }
+       });
+        },
         alertMe:function(){
               console.log("hello everyone!");
         },
@@ -110,7 +122,8 @@
       };
       return{
         alertMe:page.alertMe,
-        scrabbleMap : page.scrabble
+        scrabbleMap : page.scrabble,
+        definition : page.dictionary,
       };
     })
 })();

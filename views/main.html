@@ -2,7 +2,7 @@
     <!-- Collect the nav links, forms, and other content for toggling -->
     <div class="collapse navbar-collapse" id="navbar">
       <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home</a></li>
+        <li class="active"><a href="http://dictionary.reference.com/">Home</a></li>
         <li><a href="#"></a></li>
 
       </ul>
@@ -21,7 +21,10 @@
 </nav>
 <div class="answers">
   <div class = "container" ng-repeat="key in answers">
-      <h1 class = "word">"{{key.scrabbleWord}}"</h1>
+    <div class="wrapper">
+      <h1  class = "word">"{{key.scrabbleWord}}"</h1>
+      <button ng-click="definiiton(key.scrabbleWord)">Get Definition</button>
       <h2 class = "score">{{key.score}} points</h2>
+    </div>
 </div>
 </div>
