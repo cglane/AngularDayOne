@@ -1,0 +1,19 @@
+
+<div class="collapse navbar-collapse" id="navbar">
+  <ul class="nav navbar-left">
+    <li class="active"><a href="">ScoreCard</a></li>
+  </ul>
+  <ul class="nav navbar-nav navbar-right">
+    <li><a href="/#/">Main</a></li>
+    <li><a href="#/likes">Likes</a></li>
+  </ul>
+</div><!-- /.navbar-collapse -->
+
+
+<form class ="navbar-form navbar-left">
+  <input ng-model = "number" type="number" name="name" placeholder = "how many points" value="">
+  <button ng-click = "addToTotal(number)"type="button" name="add-it">Add it Up</button>
+  <button ng-click = "clearScore()"type="button" name="clear-score">Clear Score</button>
+</form>
+<br>
+<h1>{{score}}</h1>

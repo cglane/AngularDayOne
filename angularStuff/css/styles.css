@@ -1,0 +1,47 @@
+#navbar {
+  background-color: black; }
+
+.answers {
+  margin-top: 10%; }
+
+.container {
+  width: 30%;
+  display: inline-block;
+  border: solid #015367 1px;
+  margin-left: 2%;
+  margin-bottom: 2%; }
+  .container .word {
+    color: #60B9CE; }
+  .container .score {
+    color: black; }
+  .container a {
+    text-decoration: none; }
+
+.word-likes {
+  border: solid #015367 2px;
+  width: 70%;
+  margin-left: 15%;
+  margin-top: 2%;
+  text-align: center; }
+  .word-likes .word {
+    color: #60B9CE; }
+  .word-likes button {
+    position: absolute;
+    top: 11%;
+    left: 15%; }
+
+.definition-wrapper {
+  text-align: center;
+  margin-top: 5%;
+  width: 90%;
+  margin-left: 5%; }
+
+.definitions {
+  display: inline-block;
+  border: solid #015367 1px;
+  margin-left: .5%;
+  margin-top: .5%; }
+  .definitions p {
+    font-size: 1.2em;
+    color: #4575D4;
+    padding: 5%; }
