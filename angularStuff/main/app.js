@@ -23,7 +23,7 @@
       $routeProvider
         .when('/', {
           templateUrl: 'main/views/main.html',
-          controller: 'MainController'
+          controller: 'MainController as mainCtrl'
         })
         .when('/404', {
           templateUrl: 'main/views/404.html'

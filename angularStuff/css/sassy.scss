@@ -26,14 +26,6 @@ margin-bottom: 2%;
   margin-left: 15%;
   margin-top: 2%;
   text-align: center;
-  .word{
-    color:#60B9CE;
-  }
-  button{
-    position: absolute;
-    top:11%;
-    left: 15%;
-  }
 }
 .definition-wrapper{
   text-align: center;
@@ -42,6 +34,7 @@ margin-bottom: 2%;
   margin-left: 5%;
 }
 .definitions{
+  border-radius: 30%;
   display: inline-block;
   border: solid #015367 1px;
   margin-left: .5%;
@@ -50,5 +43,57 @@ margin-bottom: 2%;
     font-size: 1.2em;
     color:#4575D4;
     padding: 5%;
+  }
+}
+//scorecard
+.scorecard{
+  border:solid black 1px;
+  margin-top: 5%;
+  width: 80%;
+  height: 300px;
+  margin-left:10%;
+  .sector{
+    width: 50%;
+    display: inline-block;
+  }
+  input{
+    font-size: 2em;
+    font-weight: bold;
+  }
+  .buttons{
+    margin-left: 10%;
+    padding-bottom: 50%;
+    .current-score{
+      font-size: 2em;
+      font-weight: bolder;
+    }
+    .other-buttons{
+      margin-top: 2%;
+    }
+  }
+  .double-score{
+    background-color:yellow;
+  }
+  .triple-score{
+    background-color:red;
+  }
+}
+.letters{
+  width: 10%;
+  margin-left: 1%;
+  display: inline-block;
+  button{
+    margin-bottom: 10%;
+  }
+  input{
+    width: 100%;
+    margin-bottom: 10%;
+  }
+  span{
+    text-align: center;
+    padding-left: 30%;
+    margin-bottom: 2%;
+    font-weight: bold;
+    font-size:2em;
   }
 }

@@ -23,12 +23,6 @@
   margin-left: 15%;
   margin-top: 2%;
   text-align: center; }
-  .word-likes .word {
-    color: #60B9CE; }
-  .word-likes button {
-    position: absolute;
-    top: 11%;
-    left: 15%; }
 
 .definition-wrapper {
   text-align: center;
@@ -37,6 +31,7 @@
   margin-left: 5%; }
 
 .definitions {
+  border-radius: 30%;
   display: inline-block;
   border: solid #015367 1px;
   margin-left: .5%;
@@ -45,3 +40,44 @@
     font-size: 1.2em;
     color: #4575D4;
     padding: 5%; }
+
+.scorecard {
+  border: solid black 1px;
+  margin-top: 5%;
+  width: 80%;
+  height: 300px;
+  margin-left: 10%; }
+  .scorecard .sector {
+    width: 50%;
+    display: inline-block; }
+  .scorecard input {
+    font-size: 2em;
+    font-weight: bold; }
+  .scorecard .buttons {
+    margin-left: 10%;
+    padding-bottom: 50%; }
+    .scorecard .buttons .current-score {
+      font-size: 2em;
+      font-weight: bolder; }
+    .scorecard .buttons .other-buttons {
+      margin-top: 2%; }
+  .scorecard .double-score {
+    background-color: yellow; }
+  .scorecard .triple-score {
+    background-color: red; }
+
+.letters {
+  width: 10%;
+  margin-left: 1%;
+  display: inline-block; }
+  .letters button {
+    margin-bottom: 10%; }
+  .letters input {
+    width: 100%;
+    margin-bottom: 10%; }
+  .letters span {
+    text-align: center;
+    padding-left: 30%;
+    margin-bottom: 2%;
+    font-weight: bold;
+    font-size: 2em; }

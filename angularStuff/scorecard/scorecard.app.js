@@ -7,10 +7,14 @@
     ])
     .config(function ($routeProvider) {
       $routeProvider
-        .when('/scorecard', {
+        .when('/focus/:focusId/scorecard', {
           templateUrl: 'scorecard/views/scorecard.html',
           controller: 'ScoreCardController'
         })
+        // .when('/focus/scorecard'),{
+        //   templateUrl:'scorecard/views/mainscorecard.html',
+        //   controller: 'ScoreCardController'
+        // })
     });
 
 

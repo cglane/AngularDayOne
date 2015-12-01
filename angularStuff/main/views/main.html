@@ -12,16 +12,15 @@
     <button type="submit" ng-click = "scrabbleMap(string)" class="btn btn-default">Submit</button>
   </form>
   <ul class="nav navbar-nav navbar-right">
-    <li><a href="#/scorecard">ScoreCard</a></li>
+    <!-- <div class="blah"ng-controller = "ScoreCardController as scorecardCtrl">
+      <li class="active">{{score}}</li>
+    </div> -->
     <li><a href="#/likes">Saved Searches</a></li>
   </ul>
 </div><!-- /.navbar-collapse -->
 </div><!-- /.container-fluid -->
 </nav>
-<div class="last-search">
-    <h5>Last Search:</h5>
-    <h1 ng-click = "scrabbleMap(lastSearch)">{{lastSearch}}</h1>
-</div>
+<last-search></last-search>
 <div class="answers">
   <div class = "container" ng-repeat="key in answers">
     <div class="wrapper">
