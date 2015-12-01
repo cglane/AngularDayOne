@@ -42,29 +42,31 @@
     padding: 5%; }
 
 .scorecard {
-  border: solid black 1px;
+  border: solid #015367 2px;
   margin-top: 5%;
   width: 80%;
-  height: 300px;
+  height: 500px;
   margin-left: 10%; }
-  .scorecard .sector {
-    width: 50%;
-    display: inline-block; }
   .scorecard input {
     font-size: 2em;
     font-weight: bold; }
+  .scorecard .sector {
+    display: block; }
   .scorecard .buttons {
-    margin-left: 10%;
-    padding-bottom: 50%; }
+    margin-top: 5%;
+    width: 40%;
+    margin-left: 30%; }
+    .scorecard .buttons span {
+      margin-left: 60%; }
     .scorecard .buttons .current-score {
       font-size: 2em;
       font-weight: bolder; }
     .scorecard .buttons .other-buttons {
       margin-top: 2%; }
   .scorecard .double-score {
-    background-color: yellow; }
+    background-color: #FFD700; }
   .scorecard .triple-score {
-    background-color: red; }
+    background-color: #B22222; }
 
 .letters {
   width: 10%;

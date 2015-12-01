@@ -47,22 +47,26 @@ margin-bottom: 2%;
 }
 //scorecard
 .scorecard{
-  border:solid black 1px;
+  border:solid #015367  2px;
   margin-top: 5%;
   width: 80%;
-  height: 300px;
+  height: 500px;
   margin-left:10%;
-  .sector{
-    width: 50%;
-    display: inline-block;
-  }
+
   input{
     font-size: 2em;
     font-weight: bold;
   }
+.sector{
+  display: block;
+}
   .buttons{
-    margin-left: 10%;
-    padding-bottom: 50%;
+    margin-top: 5%;
+    width: 40%;
+    margin-left: 30%;
+    span{
+      margin-left: 60%;
+    }
     .current-score{
       font-size: 2em;
       font-weight: bolder;
@@ -72,10 +76,10 @@ margin-bottom: 2%;
     }
   }
   .double-score{
-    background-color:yellow;
+    background-color:#FFD700;
   }
   .triple-score{
-    background-color:red;
+    background-color:#B22222;
   }
 }
 .letters{

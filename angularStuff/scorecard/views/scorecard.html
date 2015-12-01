@@ -11,13 +11,14 @@
 </div><!-- /.navbar-collapse -->
 <div class="scorecard sector">
   <div class="letters" ng-repeat = "item in arrayScores">
-    <span>{{item.letter}}</span>
+    <span>"{{item.letter}}"</span>
     <input type="number" name="input"ng-change="change()"ng-model = "item.score">
-    <button class='double-score'ng-click="item.score = item.score * 3; change()"type="button" name="button">Double Letter</button>
+    <button class='double-score'ng-click="item.score = item.score * 2; change()"type="button" name="button">Double Letter</button>
     <button class='triple-score'ng-click="item.score = item.score * 3; change()"type="button" name="button">Triple Letter</button>
   </div>
   <div class="buttons sector">
     <span class = "current-score">{{sum}}</span>
+    <br>
     <button class= 'double-score'ng-click='sum = sum *2'type="button" name="button">Double Word</button>
     <button class= 'triple-score'ng-click='sum = sum *3'type="button" name="button">Triple Word</button>
     <button type="button" ng-click = 'sum = 0'name="button">Clear Sum</button>
