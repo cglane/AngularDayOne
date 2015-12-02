@@ -1,0 +1,30 @@
+
+<div class="collapse navbar-collapse" id="navbar">
+  <ul class="nav navbar-nav">
+    <li class="active"><a href="http://dictionary.reference.com/">Dictionary</a></li>
+    <li><a href="#"></a></li>
+
+  </ul>
+  <form class="navbar-form navbar-left" role="search">
+    <div class="form-group">
+      <input type="text" class="form-control" ng-model = "string" placeholder="Search Scrabble Words">
+    </div>
+    <button type="submit" ng-click = "scrabbleMap(string)" class="btn btn-default">Submit</button>
+  </form>
+  <ul class="nav navbar-nav navbar-right">
+    <li><a href="">Score: {{score}}</a></li>
+    <li><a href="#/likes">Saved Searches</a></li>
+  </ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+<last-search></last-search>
+<div class="answers">
+  <div class = "container" ng-repeat="key in answers">
+    <div class="wrapper">
+      <h1  class = "word">"{{key.scrabbleWord}}"</h1>
+      <button><a href="#/focus/{{key.scrabbleWord}}">Get Definition</a></button>
+        <h2 class = "score">{{key.score}} points</h2>
+    </div>
+</div>
+</div>

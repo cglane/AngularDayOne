@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>ng-intro</title>
+  <link rel="stylesheet" href="http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/styles.css" media="screen" title="no title" charset="utf-8">
+</head>
+
+<body ng-app="scrabble">
+
+  <ng-view>
+
+
+  </ng-view>
+  <script src="bower_components/jquery/dist/jquery.js" charset="utf-8"></script>
+  <script src="bower_components/underscore/underscore.js" charset="utf-8"></script>
+  <script src="node_modules/an-array-of-english-words/words.json" charset="utf-8"></script>
+  <script src="bower_components/angular/angular.js" charset="utf-8"></script>
+  <script src="bower_components/angular-route/angular-route.js" charset="utf-8"></script>
+  <!-- //main page -->
+  <script src="main/app.js" charset="utf-8"></script>
+  <script src="main/controllers.js" charset="utf-8"></script>
+  <script src="main/services.js" charset="utf-8"></script>
+  <script src="main/directive.js" charset="utf-8"></script>
+  <script src="main/lastSearch.directive.js" charset="utf-8"></script>
+  <!-- //focus page -->
+  <script src="focus/focus.app.js" charset="utf-8"></script>
+  <script src="focus/focus.controller.js" charset="utf-8"></script>
+  <script src="focus/focus.services.js" charset="utf-8"></script>
+  <script src="focus/focus.directive.js" charset="utf-8"></script>
+  <!-- likes page -->
+  <script src="likes/likes.app.js" charset="utf-8"></script>
+  <script src="likes/likes.controller.js" charset="utf-8"></script>
+  <script src="likes/likes.services.js" charset="utf-8"></script>
+  <!-- score page -->
+  <script src="scorecard/scorecard.app.js" charset="utf-8"></script>
+  <script src="scorecard/scorecard.controller.js" charset="utf-8"></script>
+  <script src="scorecard/scorecard.services.js" charset="utf-8"></script>
+</body>
+</html>

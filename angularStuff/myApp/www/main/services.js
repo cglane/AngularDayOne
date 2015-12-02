@@ -17,22 +17,15 @@
         scrabble:function(inputData){
           var arrayOfCombinations =[];
           var combinationArray = page.combinations(inputData);
-          _.each(combinationArray,function(el,idx){
-            (function(poo){
-            page.dictionary(poo).success(function(data){
-              console.log(data);
-              if(data.length > 0){
-                if(!_.contains(arrayOfCombinations,poo)){
-                arrayOfCombinations.push(poo);
-                }
+          _.each(combinationArray,function(el){
+            if(_.contains(Englishwords,el)){
+              if(!_.contains(arrayOfCombinations,el)){
+              arrayOfCombinations.push(el);
               }
-            });
-            console.log('arrayOfCombinations',arrayOfCombinations)
-          })(el);
-            })
+            }
+          });
             var aMap = page.scores(arrayOfCombinations);
             return aMap;
-
         },
         scores:function(array){
           var myMap = [];

@@ -1,0 +1,19 @@
+
+
+<div class="collapse navbar-collapse" id="navbar">
+
+  <ul class="nav navbar-nav navbar-right">
+    <li ng-controller = 'MainController as mainCtrl'><a href="">Score:  {{score}}</a></li>
+    <li><a href="/#/">Main</a></li>
+  </ul>
+</div><!-- /.navbar-collapse -->
+
+
+<div class="answers">
+  <div class = "container" ng-repeat="words in data">
+    <div class="wrapper">
+      <h1  class = "word">"{{words.word}}"</h1>
+      <button><a href="#/focus/{{words.word}}">Get Definition</a></button>
+    </div>
+</div>
+</div>

@@ -1,0 +1,22 @@
+<div class="collapse navbar-collapse" id="navbar">
+  <ul class="nav navbar-nav navbar-right">
+    <li><a = href="#/">Main</a></li>
+    <li><a href="#/scorecard">ScoreCard</a></li>
+    <li><a href="#/likes">Saved Searches</a></li>
+    <li><a href="http://dictionary.reference.com/">Dictionary</a></li>
+  </ul>
+</div><!-- /.navbar-collapse -->
+</div><!-- /.container-fluid -->
+</nav>
+<div class="word-likes">
+  <focus></focus>
+  <h2 class = "score">{{focusCtrl.score}} points</h2>
+  <a href="#/focus/{{currentWord}}/scorecard"><span class = "glyphicon glyphicon-check"></span></a>
+</div>
+<div class="definition-wrapper">
+  <div class="definitions" ng-repeat= "definition in definitions">
+        <p>
+          {{definition.text}}
+        </p>
+  </div>
+</div>
