@@ -11,12 +11,13 @@
         MainService.alertMe();
       };
       $scope.scrabbleMap=function(string){
+        var totalArray = [];
         $scope.lastSearch = localStorage.getItem('lastSearch');
         localStorage.setItem("lastSearch",string)
         if(string.length>10){
           alert('too many letters, mainframe crash')
         }else{
-        $scope.answers= MainService.scrabbleMap(string);
+        $scope.answers= MainService.scrabbleMap(totalArray,string);
         console.log($scope.answers);
       }
       };
@@ -24,7 +25,7 @@
         console.log('ive been clicked');
         MainService.definition(word).success(function(data){
           $scope.definitions = data;
-          console.log(data[0].text);
+          // console.log(data[0].text);
         })
       }
     })

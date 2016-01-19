@@ -11,10 +11,7 @@
           templateUrl: 'scorecard/views/scorecard.html',
           controller: 'ScoreCardController as scorecardCtrl'
         })
-        // .when('/focus/scorecard'),{
-        //   templateUrl:'scorecard/views/mainscorecard.html',
-        //   controller: 'ScoreCardController'
-        // })
+  
     });
 
 

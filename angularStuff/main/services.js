@@ -14,26 +14,7 @@
         alertMe:function(){
               console.log("hello everyone!");
         },
-        scrabble:function(inputData){
-          var arrayOfCombinations =[];
-          var combinationArray = page.combinations(inputData);
-          _.each(combinationArray,function(el,idx){
-            (function(poo){
-            page.dictionary(poo).success(function(data){
-              console.log(data);
-              if(data.length > 0){
-                if(!_.contains(arrayOfCombinations,poo)){
-                arrayOfCombinations.push(poo);
-                }
-              }
-            });
-            console.log('arrayOfCombinations',arrayOfCombinations)
-          })(el);
-            })
-            var aMap = page.scores(arrayOfCombinations);
-            return aMap;
-
-        },
+        //tally up all scrabble scores with
         scores:function(array){
           var myMap = [];
           _.each(array,function(el){
@@ -76,53 +57,60 @@
             myMap.push(obj);
             })
             return myMap;
-        },
-        combinations:function (string)
-        {
-            var result = [];
+        }
 
-            var loop = function (start,depth,prefix)
-            {
-                for(var i=start; i<string.length; i++)
-                {
-                    var next = prefix+string[i];
-                    if (depth > 0)
-                        loop(i+1,depth-1,next);
-                    else
-                        result.push(next);
-                }
-            }
-
-            for(var i=0; i<string.length; i++)
-            {
-                loop(0,i,'');
-            }
-            var finalArray = result.concat(page.sameLength(string))
-            return finalArray;
-        },
-        sameLength:function(string){
-          var array = [];
-          for (var i = 0; i < string.length; i++) {
-            var shortString = '';
-            var removedLetter = string[i];
-              for (var p = 0; p < string.length; p++) {
-                if(string[p] !==removedLetter){
-                  shortString = shortString + string[p];
-                }
-              }
-              for (var j = 0; j < shortString.length; j++) {
-                var anotherFnArray = shortString.split("");
-                anotherFnArray.splice(j,0,removedLetter);
-                var strings = anotherFnArray.join('');
-                array.push(strings);
-              }
-          }
-          return array;
-        },
       };
+      var insertChar = function(array,index,char){
+        var localArray = array.slice();
+        localArray.splice(index,0,char);
+        return localArray;
+      };
+      var rmvChar = function(array,index){
+        var localArray = array.slice();
+        localArray.splice(index,1);
+        return localArray;
+      };
+      var pushToArray = function(array,str){
+        if(array.indexOf(str) <= -1 && Englishwords.indexOf(str)> -1){
+      array.push(str)
+    }
+  };
+  //inserts removed character into different position in substring
+      var scramble = function(array,word){
+        var localArray = word.split('')
+        if(word.length > 0) {
+          var curWord = word;
+          for (var i = 0; i < word.length; i++) {
+              var substr = rmvChar(localArray,i)
+              var insLet = word[i];
+              for (var j = 0; j < substr.length + 1; j++) {
+                var currIt = insertChar(substr,j,insLet)
+                var newWord = currIt.join("")
+        pushToArray(array,newWord);//add all the permutations to array if not already there
+      }
+    }
+  }
+}
+//decrements number of characters to be re-ordered
+      var scrambleRe = function(array,word){
+        for (var i = 0; i < word.length; i++) {
+          for (var j = 0; j < word.length; j++) {
+            var a = i
+            var b = j;
+            if(a > b){
+              var nWord = word[i]+word[j];
+            }else{
+              var nWord = word.substr(i,j+1);
+            }
+      scramble(array,nWord);
+    }
+  }
+  return page.scores(array);
+}
+
       return{
         alertMe:page.alertMe,
-        scrabbleMap : page.scrabble,
+        scrabbleMap : scrambleRe,
         definition : page.dictionary,
       };
     })
